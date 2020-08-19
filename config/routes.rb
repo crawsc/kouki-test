@@ -5,6 +5,10 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
+  resources :articles
+
+  root 'layouts#application'
+
   resources :articles do
     resources :comments
   end
